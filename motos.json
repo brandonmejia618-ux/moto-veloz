@@ -1,0 +1,138 @@
+{
+    "nombre": "Moto Veloz",
+    "eslogan": "Velocidad y estilo sobre dos ruedas",
+    "motos": [
+        {
+            "id": "boxer-ct-100",
+            "modelo": "Boxer CT 100",
+            "imagen": "img/boxer-ct-100.jpeg",
+            "precio": 6500000,
+            "moneda": "COP",
+            "categoria": "Trabajo",
+            "cilindraje": "97 cc",
+            "potencia": "8 HP",
+            "peso": "110 kg",
+            "velocidadMaxima": "90 km/h",
+            "descripcion": "La Boxer CT 100 es la motocicleta de trabajo más confiable del mercado. Su motor monocilíndrico de bajo consumo la convierte en la mejor opción para repartidores y uso diario. Resistente, económica y fácil de mantener.",
+            "colores": ["Negro", "Rojo", "Azul"],
+            "caracteristicas": [
+                "Motor monocilíndrico de 4 tiempos",
+                "Arranque eléctrico y de patada",
+                "Frenos de tambor delantero y trasero",
+                "Rendimiento aproximado de 55 km por galón",
+                "Asiento largo para pasajero",
+                "Garantía de 2 años"
+            ]
+        },
+        {
+            "id": "pulsar-ns-200",
+            "modelo": "Pulsar NS 200",
+            "imagen": "img/pulsar-ns-200.jpeg",
+            "precio": 12500000,
+            "moneda": "COP",
+            "categoria": "Deportiva",
+            "cilindraje": "199 cc",
+            "potencia": "24 HP",
+            "peso": "155 kg",
+            "velocidadMaxima": "140 km/h",
+            "descripcion": "La Pulsar NS 200 es una deportiva ideal para ciudad y carretera. Su motor de 4 válvulas ofrece una excelente relación precio-potencia, con un diseño agresivo que llama la atención en cada esquina.",
+            "colores": ["Rojo", "Negro", "Amarillo"],
+            "caracteristicas": [
+                "Motor de 4 válvulas con inyección electrónica",
+                "Freno de disco delantero y trasero",
+                "Tablero digital con indicador de marchas",
+                "Suspensión monocross trasera",
+                "Faro halógeno de alta luminosidad",
+                "Garantía de 2 años"
+            ]
+        },
+        {
+            "id": "akt-nkd-125",
+            "modelo": "AKT NKD 125",
+            "imagen": "img/akt-nkd-125.jpeg",
+            "precio": 7800000,
+            "moneda": "COP",
+            "categoria": "Urbana",
+            "cilindraje": "124 cc",
+            "potencia": "11 HP",
+            "peso": "120 kg",
+            "velocidadMaxima": "100 km/h",
+            "descripcion": "La AKT NKD 125 es perfecta para la movilidad urbana. Bajo consumo de combustible, mantenimiento económico y un diseño moderno que la convierte en la favorita de los motociclistas urbanos.",
+            "colores": ["Negro", "Blanco", "Rojo"],
+            "caracteristicas": [
+                "Motor de 4 tiempos refrigerado por aire",
+                "Freno de disco delantero",
+                "Rines de aleación",
+                "Arranque eléctrico",
+                "Rendimiento de 50 km por galón",
+                "Garantía de 3 años"
+            ]
+        },
+        {
+            "id": "yamaha-fz-25",
+            "modelo": "Yamaha FZ 25",
+            "imagen": "img/yamaha-fz-125.jpeg",
+            "precio": 14500000,
+            "moneda": "COP",
+            "categoria": "Deportiva",
+            "cilindraje": "249 cc",
+            "potencia": "20 HP",
+            "peso": "152 kg",
+            "velocidadMaxima": "130 km/h",
+            "descripcion": "La Yamaha FZ 25 es una deportiva de media cilindraje con diseño agresivo y gran desempeño. Incorpora ABS de doble canal y un tablero LCD que la posicionan como una de las mejores de su categoría.",
+            "colores": ["Azul", "Negro", "Gris"],
+            "caracteristicas": [
+                "Motor de inyección electrónica",
+                "ABS de doble canal",
+                "Tablero LCD con iluminación LED",
+                "Faro y stop LED",
+                "Suspensión telescópica delantera",
+                "Garantía de 2 años"
+            ]
+        },
+        {
+            "id": "honda-cb-125",
+            "modelo": "Honda CB 125",
+            "imagen": "img/honda-cb-125.jpeg",
+            "precio": 9200000,
+            "moneda": "COP",
+            "categoria": "Urbana",
+            "cilindraje": "124 cc",
+            "potencia": "10 HP",
+            "peso": "118 kg",
+            "velocidadMaxima": "95 km/h",
+            "descripcion": "La Honda CB 125 es la clásica urbana de Honda, reconocida por su durabilidad y bajo consumo. Ideal para quienes buscan una moto confiable para el día a día con la calidad garantizada de la marca.",
+            "colores": ["Rojo", "Negro", "Blanco"],
+            "caracteristicas": [
+                "Motor OHC de 4 tiempos",
+                "Arranque eléctrico",
+                "Frenos CBS (Combined Brake System)",
+                "Rendimiento de 60 km por galón",
+                "Asiento ergonómico",
+                "Garantía de 2 años"
+            ]
+        },
+        {
+            "id": "suzuki-gixxer-150",
+            "modelo": "Suzuki Gixxer 150",
+            "imagen": "img/suzuki-gixxer-150.jpeg",
+            "precio": 10800000,
+            "moneda": "COP",
+            "categoria": "Deportiva",
+            "cilindraje": "155 cc",
+            "potencia": "14 HP",
+            "peso": "135 kg",
+            "velocidadMaxima": "120 km/h",
+            "descripcion": "La Suzuki Gixxer 150 combina deportividad y economía. Su motor de inyección electrónica ofrece una respuesta ágil, y su diseño inspirado en las motos de alta cilindraje la hace destacar en el tráfico urbano.",
+            "colores": ["Azul", "Negro", "Rojo"],
+            "caracteristicas": [
+                "Motor de inyección electrónica",
+                "Freno de disco delantero",
+                "Tablero digital negativo",
+                "Faro LED",
+                "Escape deportivo",
+                "Garantía de 2 años"
+            ]
+        }
+    ]
+}

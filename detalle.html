@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle | Moto Veloz</title>
+    <!-- Conecta el archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="cabecera">
+        <h1 id="tituloDetalle">Detalle de la Moto</h1>
+        <p class="subtitulo">Ficha técnica completa</p>
+        <button id="btnTema" class="btn-tema">Modo oscuro</button>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL (sin índice lateral) -->
+    <div class="contenedor-principal detalle-contenedor">
+
+        <!-- Enlace para volver al catálogo -->
+        <a href="index.html" class="btn-volver">&larr; Volver al catálogo</a>
+
+        <!-- Ficha de la moto: se llena con JavaScript según el ?id= de la URL -->
+        <main class="contenido ficha-moto" id="fichaMoto">
+            <p class="cargando">Cargando información de la moto...</p>
+        </main>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <p>2025 Moto Veloz | Concesionario oficial | Santa Marta/Colombia</p>
+    </footer>
+
+    <!-- Conecta el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

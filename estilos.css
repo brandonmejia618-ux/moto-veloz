@@ -1,0 +1,584 @@
+/* ============================================
+   RESET Y VARIABLES GLOBALES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --negro: #111111;         /* Negro principal para textos y cabecera */
+    --gris-texto: #555555;    /* Gris para párrafos */
+    --gris-suave: #f7f7f7;    /* Gris muy claro para fondos secundarios */
+    --gris-borde: #e5e5e5;    /* Gris para líneas y separadores */
+    --blanco: #ffffff;        /* Blanco para tarjetas y contenido */
+    --fondo: #fafafa;         /* Fondo general de la página */
+}
+
+/* Modo oscuro: redefinimos las variables dentro de body.oscuro */
+body.oscuro {
+    --negro: #f0f0f0;
+    --gris-texto: #b0b0b0;
+    --gris-suave: #1c1c1c;
+    --gris-borde: #333333;
+    --blanco: #1a1a1a;
+    --fondo: #0f0f0f;
+}
+
+/* ============================================
+   BODY
+   ============================================ */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+    background: var(--fondo);
+    color: var(--gris-texto);
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ============================================
+   CABECERA
+   ============================================ */
+.cabecera {
+    background: var(--blanco);
+    color: var(--negro);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.cabecera h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    color: var(--negro);
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    font-weight: 400;
+}
+
+/* Botón de modo oscuro en la esquina superior derecha */
+.btn-tema {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    color: var(--negro);
+    border: 1px solid var(--gris-borde);
+    padding: 7px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.btn-tema:hover {
+    background: var(--gris-suave);
+    border-color: var(--negro);
+}
+
+/* ============================================
+   CONTENEDOR PRINCIPAL (Flexbox)
+   ============================================ */
+.contenedor-principal {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* ============================================
+   ÍNDICE LATERAL
+   ============================================ */
+.indice {
+    flex: 0 0 220px;
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-borde);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.indice h2 {
+    color: var(--negro);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.indice ul {
+    list-style: none;
+}
+
+.indice li {
+    margin-bottom: 6px;
+}
+
+.indice a {
+    color: var(--gris-texto);
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.indice a:hover {
+    color: var(--negro);
+}
+
+.info-extra {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gris-borde);
+    font-size: 0.85rem;
+}
+
+.info-extra h3 {
+    color: var(--negro);
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-extra p {
+    margin-bottom: 6px;
+    color: var(--gris-texto);
+}
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+   ============================================ */
+.contenido {
+    flex: 1;
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-borde);
+}
+
+.seccion {
+    margin-bottom: 40px;
+}
+
+.seccion h2 {
+    color: var(--negro);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: -0.3px;
+}
+
+.seccion p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* ============================================
+   GRID DE MOTOS (tarjetas del catálogo)
+   ============================================ */
+.grid-motos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* Tarjeta de la moto */
+.card-moto {
+    background: var(--gris-suave);
+    border-radius: 8px;
+    border: 1px solid var(--gris-borde);
+    padding: 25px;
+    transition: border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-moto:hover {
+    border-color: var(--negro);
+}
+
+/* Etiqueta de categoría */
+.card-moto .categoria {
+    display: inline-block;
+    color: var(--gris-texto);
+    font-size: 0.75rem;
+    padding: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+.card-moto h3 {
+    color: var(--negro);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.card-moto .precio {
+    color: var(--negro);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card-moto .descripcion {
+    font-size: 0.92rem;
+    color: var(--gris-texto);
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Botón "Ver detalles" */
+.btn-ver {
+    display: inline-block;
+    background: var(--negro);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+    align-self: flex-start;
+}
+
+.btn-ver:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   DETALLE DE MOTO (detalle.html)
+   ============================================ */
+.detalle-contenedor {
+    display: block;
+    max-width: 800px;
+}
+
+/* Botón "Volver al catálogo" */
+.btn-volver {
+    display: inline-block;
+    color: var(--gris-texto);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.btn-volver:hover {
+    color: var(--negro);
+}
+
+.ficha-moto {
+    padding: 40px;
+}
+
+.ficha-info h2 {
+    color: var(--negro);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.ficha-info .categoria {
+    display: inline-block;
+    color: var(--gris-texto);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.ficha-info .precio-grande {
+    color: var(--negro);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ficha-info .descripcion {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Tabla de especificaciones técnicas */
+.tabla-specs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 0.92rem;
+}
+
+.tabla-specs th,
+.tabla-specs td {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gris-borde);
+    text-align: left;
+}
+
+.tabla-specs th {
+    color: var(--negro);
+    font-weight: 500;
+    width: 45%;
+}
+
+.tabla-specs td {
+    color: var(--gris-texto);
+}
+
+/* Lista de características */
+.lista-caract {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.lista-caract li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gris-borde);
+    font-size: 0.92rem;
+    color: var(--gris-texto);
+}
+
+.lista-caract li:last-child {
+    border-bottom: none;
+}
+
+/* Colores disponibles */
+.colores {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.color-chip {
+    background: transparent;
+    color: var(--gris-texto);
+    padding: 5px 14px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Botón de cotizar */
+.btn-comprar {
+    display: inline-block;
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+
+.btn-comprar:hover {
+    opacity: 0.8;
+}
+
+/* Títulos de bloque dentro de la ficha */
+.titulo-bloque {
+    color: var(--negro);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Mensaje mientras carga la ficha */
+.cargando {
+    text-align: center;
+    font-style: italic;
+    color: var(--gris-texto);
+    padding: 40px;
+}
+
+/* ============================================
+   BOTÓN VOLVER ARRIBA
+   ============================================ */
+.btn-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--negro);
+    color: var(--blanco);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.btn-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-arriba:hover {
+    opacity: 0.8;
+}
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+.pie {
+    background: var(--blanco);
+    color: var(--gris-texto);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 1px solid var(--gris-borde);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE (pantallas pequeñas)
+   ============================================ */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .indice {
+        position: static;
+        flex: 1;
+    }
+
+    .cabecera h1 {
+        font-size: 1.4rem;
+    }
+
+    .contenido {
+        padding: 25px;
+    }
+
+    .ficha-moto {
+        padding: 25px;
+    }
+}
+
+/* ============================================
+   IMÁGENES DE MOTOS
+   ============================================ */
+
+.card-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    background: var(--gris-suave);
+}
+
+.ficha-imagen {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background: var(--gris-suave);
+}
+
+@media (max-width: 768px) {
+    .card-imagen {
+        height: 180px;
+    }
+
+    .ficha-imagen {
+        height: 220px;
+    }
+}
+
+/* ============================================
+   CONTROLES DEL CATÁLOGO (buscador, filtros)
+   ============================================ */
+
+.controles-catalogo {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0 15px;
+    flex-wrap: wrap;
+}
+
+.control-input,
+.control-select {
+    padding: 10px 14px;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    background: var(--blanco);
+    color: var(--negro);
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.control-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.control-input:focus,
+.control-select:focus {
+    outline: none;
+    border-color: var(--negro);
+}
+
+.control-select {
+    cursor: pointer;
+    min-width: 180px;
+}
+
+/* Contador de resultados */
+.contador {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin-bottom: 18px;
+}
+
+/* Mensaje cuando no hay resultados */
+.sin-resultados {
+    text-align: center;
+    font-style: italic;
+    color: var(--gris-texto);
+    padding: 40px;
+    grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .controles-catalogo {
+        flex-direction: column;
+    }
+
+    .control-input,
+    .control-select {
+        width: 100%;
+    }
+}

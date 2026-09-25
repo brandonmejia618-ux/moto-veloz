@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto Veloz | Catálogo de Motos</title>
+    <!-- Conecta el archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO: título, subtítulo y botón de modo oscuro -->
+    <header class="cabecera">
+        <h1>Moto Veloz</h1>
+        <p class="subtitulo">Velocidad y estilo sobre dos ruedas</p>
+        <button id="btnTema" class="btn-tema">Modo oscuro</button>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL: índice lateral + contenido -->
+    <div class="contenedor-principal">
+
+        <!-- ÍNDICE LATERAL: se llena con JavaScript desde motos.json -->
+        <aside class="indice">
+            <h2>Catálogo</h2>
+            <nav>
+                <ul id="listaIndice">
+                    <!-- Aquí JavaScript insertará el modelo -->
+                </ul>
+            </nav>
+            <div class="info-extra">
+                <h3>Visítanos</h3>
+                <p>Carrera 41 #22-56<br>Santa Marta, Colombia</p>
+                <p>Tel: 3008641443</p>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- Sección de bienvenida -->
+            <section id="intro" class="seccion">
+                <h2>Bienvenido a Moto Veloz</h2>
+                <p>Descubre nuestra selección de motocicletas diseñadas para quienes buscan
+                emoción, rendimiento y estilo. Cada modelo ha sido cuidadosamente elegido
+                para ofrecerte la mejor experiencia sobre dos ruedas.</p>
+            </section>
+
+            <!-- Sección del catálogo de motos -->
+          <section id="catalogo" class="seccion">
+    <h2>Modelos disponibles</h2>
+
+    <!-- Barra de controles: buscador, filtro y ordenamiento -->
+    <div class="controles-catalogo">
+        <input 
+            type="text" 
+            id="buscador" 
+            class="control-input" 
+            placeholder="🔍 Buscar moto por nombre...">
+
+        <select id="filtroCategoria" class="control-select">
+            <option value="Todas">Todas las categorías</option>
+            <option value="Trabajo">Trabajo</option>
+            <option value="Deportiva">Deportiva</option>
+            <option value="Urbana">Urbana</option>
+        </select>
+
+        <select id="ordenarPrecio" class="control-select">
+            <option value="default">Ordenar por...</option>
+            <option value="asc">Precio: menor a mayor</option>
+            <option value="desc">Precio: mayor a menor</option>
+        </select>
+    </div>
+
+    <!-- Contador de resultados -->
+    <p id="contadorResultados" class="contador"></p>
+
+    <!-- Grid de motos -->
+    <div id="listaMotos" class="grid-motos">
+        <!-- Aquí JavaScript insertará las tarjetas -->
+    </div>
+</section>
+        </main>
+    </div>
+
+    <!-- BOTÓN VOLVER ARRIBA: aparece al hacer scroll -->
+    <button id="btnArriba" class="btn-arriba" title="Volver arriba">↑</button>
+
+
+    <!-- Conecta el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
