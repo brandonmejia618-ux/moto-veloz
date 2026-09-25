@@ -13,7 +13,7 @@
     --gris-suave: #f7f7f7;    /* Gris muy claro para fondos secundarios */
     --gris-borde: #e5e5e5;    /* Gris para líneas y separadores */
     --blanco: #ffffff;        /* Blanco para tarjetas y contenido */
-    --fondo: #fafafa;         /* Fondo general de la página */
+    --fondo: #eaf3fb;         /* Fondo general de la página */
 }
 
 /* Modo oscuro: redefinimos las variables dentro de body.oscuro */
